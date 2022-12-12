@@ -2,6 +2,8 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: STOREKA
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,3 +22,4 @@ spring:
     password: admin
 
 cors.allowed.origins: http://localhost:4200
+

@@ -1,12 +1,12 @@
 server:
-  port: 8443
-  httpPort: 8080
+  redirectFromPort: 8080
   ssl:
     key-store-type: PKCS12 # The format used for the keystore. It could be set to JKS in case it is a JKS file
     key-store: classpath:keystore/storeka.p12 # The path to the keystore containing the certificate
     key-store-password: storeka # The password used to generate the certificate
     key-alias: storeka # The alias mapped to the certificate
-    enabled: true
+    port: 8443
+    enabled: false
 
 spring:
   application:

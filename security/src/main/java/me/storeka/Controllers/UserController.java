@@ -8,6 +8,8 @@ import me.storeka.DTO.AuthenticationRequest;
 import me.storeka.Services.UserService;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @RestController
 @RequestMapping("user")
 @RequiredArgsConstructor
@@ -17,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("login")
-    public void login(@RequestBody @Valid AuthenticationRequest user, HttpServletResponse response){
+    public void login(@RequestBody @Valid AuthenticationRequest user, HttpServletResponse response) throws IOException {
         userService.login(user, response);
     }
 

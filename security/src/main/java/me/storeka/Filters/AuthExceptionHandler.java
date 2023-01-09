@@ -19,7 +19,7 @@ public class AuthExceptionHandler implements AuthenticationEntryPoint {
         logger.info("Security Error: " + authException.getMessage());
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setContentType("application/json");
-        response.getWriter().write("{\"message\":\"Invalid username or password!\"}");
+        response.getWriter().write("{\"message\":\""+authException.getMessage()+"\"}");
     }
 
 }

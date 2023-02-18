@@ -1,4 +1,4 @@
-package me.storeka.config;
+package me.security.Config;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;

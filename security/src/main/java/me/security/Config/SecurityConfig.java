@@ -1,14 +1,11 @@
-package me.storeka.SpringSecurity;
+package me.security.Config;
 
 import lombok.RequiredArgsConstructor;
-import me.storeka.Filters.*;
-import org.apache.catalina.Context;
-import org.apache.catalina.connector.Connector;
-import org.apache.tomcat.util.descriptor.web.SecurityCollection;
-import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
+import me.security.Filters.AuthExceptionHandler;
+import me.security.Filters.JWTTokenValidatorFilter;
+import me.security.Services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -28,6 +25,7 @@ import java.util.Collections;
 
 @Configuration
 @EnableWebSecurity
+@ConditionalOnProperty(name = "security.enabled", havingValue = "true")
 @RequiredArgsConstructor
 public class SecurityConfig {
 

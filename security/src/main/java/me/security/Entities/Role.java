@@ -1,4 +1,4 @@
-package me.storeka.Entities;
+package me.security.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;

@@ -10,13 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>application</artifactId>
-    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>me</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>security</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

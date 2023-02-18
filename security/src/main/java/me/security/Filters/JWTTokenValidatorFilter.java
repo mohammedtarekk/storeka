@@ -1,14 +1,14 @@
-package me.storeka.Filters;
+package me.security.Filters;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import me.storeka.Utils.JWTUtils;
-import me.storeka.SpringSecurity.SecurityConstants;
-import me.storeka.Entities.User;
-import me.storeka.SpringSecurity.UserDetailsServiceImpl;
+import me.security.Entities.User;
+import me.security.Utils.JWTUtils;
+import me.security.Config.SecurityConstants;
+import me.security.Services.UserDetailsServiceImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

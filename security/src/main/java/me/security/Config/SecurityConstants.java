@@ -1,4 +1,4 @@
-package me.storeka.SpringSecurity;
+package me.security.Config;
 
 import org.springframework.beans.factory.annotation.Value;
 

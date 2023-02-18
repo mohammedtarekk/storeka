@@ -1,10 +1,10 @@
-package me.storeka.Services;
+package me.security.Services;
 
 import jakarta.servlet.http.HttpServletResponse;
-import me.storeka.Utils.JWTUtils;
-import me.storeka.SpringSecurity.SecurityConstants;
-import me.storeka.DTO.AuthenticationRequest;
-import me.storeka.Repositories.UserRepo;
+import me.security.Utils.JWTUtils;
+import me.security.Config.SecurityConstants;
+import me.security.DTO.AuthenticationRequest;
+import me.security.Repositories.UserRepo;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

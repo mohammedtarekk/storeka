@@ -1,11 +1,11 @@
-package me.storeka.Controllers;
+package me.security.Controllers;
 
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-import me.storeka.DTO.AuthenticationRequest;
-import me.storeka.Services.UserService;
+import me.security.DTO.AuthenticationRequest;
+import me.security.Services.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;

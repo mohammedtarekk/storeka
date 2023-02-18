@@ -1,7 +1,6 @@
 package me.storeka.exceptions;
 
 import jakarta.validation.ConstraintViolationException;
-import me.storeka.Filters.AuthExceptionHandler;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

@@ -2,13 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>security</module>
-        <module>application</module>
-    </modules>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -16,64 +9,51 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>security</module>
+        <module>application</module>
+    </modules>
+
     <groupId>me</groupId>
     <artifactId>storeka</artifactId>
+    <name>${project.groupId}:${project.artifactId}</name>
     <version>0.0.1-SNAPSHOT</version>
-    <name>storeka</name>
     <description>storeka</description>
 
     <properties>
         <java.version>19</java.version>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
+        <security.version>0.0.1-SNAPSHOT</security.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- START TESTING -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+            <!-- END TESTING -->
+
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>security</artifactId>
+                <version>${security.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
-
-        <!-- START WEB -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
-        <!-- END WEB -->
-
-        <!-- START DATA STORAGE -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency> <!-- DB queries logging proxy -->
-            <groupId>net.ttddyy</groupId>
-            <artifactId>datasource-proxy</artifactId>
-            <version>1.8.1</version>
-        </dependency>
-        <!-- END DATA STORAGE -->
-
-        <!-- START TESTING -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- END TESTING -->
-
-        <!-- START HELPERS -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- END HELPERS -->
-
     </dependencies>
 
     <build>

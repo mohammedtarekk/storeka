@@ -1,7 +1,7 @@
-package me.storeka.Utils;
+package me.security.Utils;
 
 import io.jsonwebtoken.*;
-import me.storeka.SpringSecurity.SecurityConstants;
+import me.security.Config.SecurityConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.*;

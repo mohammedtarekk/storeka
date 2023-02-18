@@ -1,8 +1,8 @@
-package me.storeka.SpringSecurity;
+package me.security.Services;
 
 import lombok.RequiredArgsConstructor;
-import me.storeka.Entities.User;
-import me.storeka.Repositories.UserRepo;
+import me.security.Entities.User;
+import me.security.Repositories.UserRepo;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

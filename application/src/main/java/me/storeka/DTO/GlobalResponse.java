@@ -19,7 +19,7 @@ public class GlobalResponse {
     protected LocalDateTime timestamp;
     protected int statusCode;
     protected HttpStatus status;
-    protected String reason;
+    protected String exception;
     protected String clientMessage;
     protected String developerMessage;
     protected Object body;

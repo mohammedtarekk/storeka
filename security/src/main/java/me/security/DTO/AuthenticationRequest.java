@@ -1,4 +1,4 @@
-package me.storeka.DTO;
+package me.security.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
